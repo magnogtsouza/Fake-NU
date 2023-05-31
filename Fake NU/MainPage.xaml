@@ -9,7 +9,7 @@
         <ScrollView Margin="0" VerticalOptions="CenterAndExpand" VerticalScrollBarVisibility="Never">
             <VerticalStackLayout
             Spacing="15"
-            Background="white"
+            Background="{StaticResource DefulBk}"
             VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
                 <Grid BackgroundColor="{StaticResource PrimaryColor}" Margin="0" HorizontalOptions="FillAndExpand">
@@ -24,7 +24,7 @@
                     <Ellipse Grid.Row="0" Grid.Column="0" Margin="10" HorizontalOptions="Start" HeightRequest="35" WidthRequest="35"/>
                     <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End" Margin="10">
                         <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
-                        <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
+                        <Image Source="help.svg" Grid.Column="2" HeightRequest="35"/>
                         <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
                     </StackLayout>
                     <Frame Grid.Row="1" Grid.ColumnSpan="2" Margin="10" Padding="10" BorderColor="Transparent">
@@ -383,12 +383,11 @@
                     </HorizontalStackLayout>
 
                 </ScrollView>
-                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
-                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="70" Fill="Transparent"/>
             </VerticalStackLayout>
         </ScrollView>
 
-        <Frame VerticalOptions="End" HorizontalOptions="Center" Margin="25" Padding="10" BackgroundColor="White" BorderColor="Transparent" CornerRadius="50">
+        <Frame VerticalOptions="End" HorizontalOptions="Center" Margin="15" Padding="10" BackgroundColor="#7FFFFFFF" BorderColor="Transparent" CornerRadius="50" HasShadow="True">
             <StackLayout Orientation="Horizontal">
                 <Button Text="()" CornerRadius="50"/>
                 <Button Text="()" CornerRadius="50"/>

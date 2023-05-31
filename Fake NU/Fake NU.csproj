@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\arrow_forward.svg" />
+	  <None Remove="Resources\Images\help.svg" />
 	  <None Remove="Resources\Images\more_vert.svg" />
 	</ItemGroup>
 
