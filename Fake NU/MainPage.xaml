@@ -21,7 +21,8 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Ellipse Grid.Row="0" Grid.Column="0" Margin="10" HorizontalOptions="Start" HeightRequest="35" WidthRequest="35"/>
+                    <Ellipse Grid.Row="0" Grid.Column="0" Margin="10" HorizontalOptions="Start" HeightRequest="40" WidthRequest="40" Fill="#7FFFFFFF"/>
+                    <Image Source="add_photo.svg" Grid.Row="0" Grid.Column="0" Margin="15" HorizontalOptions="Start" HeightRequest="29" WidthRequest="29"/>
                     <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End" Margin="10">
                         <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
                         <Image Source="help.svg" Grid.Column="2" HeightRequest="35"/>
@@ -51,7 +52,7 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Label Text="Conta" FontSize="Medium"/>
-                    <Label Text="R$ 15.389,07" Grid.Row="1" FontSize="Medium"/>
+                    <Label Text="R$ 15.389,07" Grid.Row="1" FontSize="Medium" x:Name="lblConta"/>
                     <Image Source="arrow_forward.svg" Grid.Column="1" HeightRequest="20"/>
                 </Grid>
 
@@ -186,7 +187,7 @@
 
                 <Frame Margin="10" Padding="5" BackgroundColor="LightGray">
                     <StackLayout Orientation="Horizontal">
-                        <Rectangle Fill="Pink" HeightRequest="35" WidthRequest="35"/>
+                        <Image Source="credit_card" HeightRequest="35"/>
                         <Label Text="Meus cartões" VerticalOptions="Center" Margin="10"/>
                     </StackLayout>
                 </Frame>
@@ -256,8 +257,8 @@
                     </Grid.ColumnDefinitions>
                     <Label Text="Cartão de credito" FontSize="Medium"/>
                     <Label Text="Fatura atual" Grid.Row="1" FontAttributes="None"/>
-                    <Label Text="R$ 1.379,07" Grid.Row="2" FontSize="Medium"/>
-                    <Label Text="Limite disponivel de R$1.567,78" Grid.Row="3" TextColor="Gray" FontAttributes="None"/>
+                    <Label Text="R$ 1.379,07" Grid.Row="2" FontSize="Medium" x:Name="lblFatura"/>
+                    <Label Text="Limite disponivel de R$1.567,78" Grid.Row="3" TextColor="Gray" FontAttributes="None" x:Name="lblCredit"/>
                     <Label Grid.Row="4" TextColor="Gray" FontAttributes="None">
                         <Label.FormattedText>
                             <FormattedString>
@@ -290,8 +291,8 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="Emprestimo" FontSize="Medium"/>
-                        <Label Text="Tudo certo voce esta em dia" Grid.Row="1" FontAttributes="None"/>
+                        <Label Text="Empréstimo" FontSize="Medium"/>
+                        <Label Text="Tudo certo! voce esta em dia." Grid.Row="1" FontAttributes="None"/>
                         <Image Source="arrow_forward.svg" Grid.Column="1" HeightRequest="20"/>
                     </Grid>
 
@@ -313,7 +314,7 @@
                         <Style TargetType="Frame">
                             <Setter Property="BackgroundColor" Value="LightGray"/>
                             <Setter Property="BorderColor" Value="Transparent"/>
-                            <Setter Property="Margin" Value="10"/>
+                            <Setter Property="Margin" Value="5"/>
                             <Setter Property="Padding" Value="0"/>
                         </Style>
                         <Style TargetType="Button">
@@ -389,9 +390,9 @@
 
         <Frame VerticalOptions="End" HorizontalOptions="Center" Margin="15" Padding="10" BackgroundColor="#7FFFFFFF" BorderColor="Transparent" CornerRadius="50" HasShadow="True">
             <StackLayout Orientation="Horizontal">
-                <Button Text="()" CornerRadius="50"/>
-                <Button Text="()" CornerRadius="50"/>
-                <Button Text="()" CornerRadius="50"/>
+                <ImageButton BackgroundColor="#CC68FD" CornerRadius="23" Padding="5" Margin="0" HeightRequest="55" WidthRequest="55" Source="sync.svg" Rotation="90" Clicked="ImageButton_Clicked"/>
+                <ImageButton BackgroundColor="White" CornerRadius="23" Padding="5" Margin="0" HeightRequest="55" WidthRequest="55" Source="attach_money.svg"/>
+                <ImageButton BackgroundColor="White" CornerRadius="23" Padding="5" Margin="0" HeightRequest="55" WidthRequest="55" Source="shopping_bag.svg"/>
             </StackLayout>
         </Frame>
     </Grid>

@@ -11,9 +11,14 @@
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontFamily" Value="circular_std_book"/>
             </Style>
             <Style TargetType="Rectangle">
                 <Setter Property="Fill" Value="lightgray" />
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="10"/>
             </Style>
             <Style TargetType="Ellipse">
                 <Setter Property="Fill" Value="lightgray"/>
