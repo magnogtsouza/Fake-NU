@@ -2,268 +2,400 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fake_NU.MainPage">
-
-    <ScrollView Margin="0" VerticalOptions="CenterAndExpand">
-        <VerticalStackLayout
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Margin="0" VerticalOptions="CenterAndExpand" VerticalScrollBarVisibility="Never">
+            <VerticalStackLayout
             Spacing="15"
             Background="white"
             VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
-            <Grid BackgroundColor="{StaticResource PrimaryColor}" Margin="0" HorizontalOptions="FillAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Ellipse Grid.Row="0" Fill="Red" Grid.Column="0" Margin="10" HorizontalOptions="Start" HeightRequest="35" WidthRequest="35"/>
-                <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End" Margin="10">
-                    <Ellipse Grid.Row="0" Fill="Red" HeightRequest="35" WidthRequest="35"/>
-                    <Ellipse Grid.Row="0" Fill="Red" HeightRequest="35" WidthRequest="35"/>
-                    <Ellipse Grid.Row="0" Fill="Red" HeightRequest="35" WidthRequest="35"/>
-                </StackLayout>
-                <Frame Grid.Row="1" Grid.ColumnSpan="2" Margin="10" Padding="10" BorderColor="Transparent">
-                    <Grid >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Rectangle Grid.Column="0" Fill="Red" HeightRequest="35" WidthRequest="35"/>
-                        <Label Grid.Column="1" Margin="10" VerticalOptions="Center" Text="Seu demonstrativo de rendimentos 2022 esta aqui" TextColor="{StaticResource PrimaryColor}" FontSize="Caption" LineBreakMode="WordWrap" />
-                        <Rectangle Grid.Column="2" Fill="Red" HeightRequest="35" WidthRequest="5"/>
-                    </Grid>
+                <Grid BackgroundColor="{StaticResource PrimaryColor}" Margin="0" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Grid.Row="0" Grid.Column="0" Margin="10" HorizontalOptions="Start" HeightRequest="35" WidthRequest="35"/>
+                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End" Margin="10">
+                        <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
+                        <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
+                        <Ellipse Grid.Row="0" HeightRequest="35" WidthRequest="35"/>
+                    </StackLayout>
+                    <Frame Grid.Row="1" Grid.ColumnSpan="2" Margin="10" Padding="10" BorderColor="Transparent">
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Grid.Column="0" HeightRequest="35" WidthRequest="35"/>
+                            <Label Grid.Column="1" Margin="10" VerticalOptions="Center" Text="Seu demonstrativo de rendimentos 2022 esta aqui" TextColor="{StaticResource PrimaryColor}" FontSize="Caption" LineBreakMode="WordWrap" />
+                            <Image Source="more_vert.svg" Grid.Column="2" HeightRequest="20"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Conta" FontSize="Medium"/>
+                    <Label Text="R$ 15.389,07" Grid.Row="1" FontSize="Medium"/>
+                    <Image Source="arrow_forward.svg" Grid.Column="1" HeightRequest="20"/>
+                </Grid>
+
+                <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand" HorizontalScrollBarVisibility="Never">
+                    <ScrollView.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="LineBreakMode" Value="WordWrap"/>
+                            <Setter Property="HorizontalTextAlignment" Value="Center" />
+                        </Style>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="HeightRequest" Value="75"/>
+                            <Setter Property="WidthRequest" Value="75"/>
+                            <Setter Property="Fill" Value="LightGray"/>
+                        </Style>
+                        <Style TargetType="Grid">
+                            <Setter Property="WidthRequest" Value="80"/>
+                        </Style>
+                    </ScrollView.Resources>
+                    <HorizontalStackLayout Spacing="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Area Pix" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Pagar" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Transferir" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Recarga de celular" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Caixinhas" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Cobrar" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Investir" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Doação" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Depositar" Grid.Row="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse/>
+                            <Label Text="Transferir Internac." Grid.Row="1"/>
+                        </Grid>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+                <Frame Margin="10" Padding="5" BackgroundColor="LightGray">
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle Fill="Pink" HeightRequest="35" WidthRequest="35"/>
+                        <Label Text="Meus cartões" VerticalOptions="Center" Margin="10"/>
+                    </StackLayout>
                 </Frame>
-            </Grid>
 
-            <Grid Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Conta" FontSize="Medium"/>
-                <Label Text="R$ 389,07" Grid.Row="1" FontSize="Medium"/>
-                <Label Text=">" Grid.Column="1" FontSize="Medium"/>
-            </Grid>
+                <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand" HorizontalScrollBarVisibility="Never">
+                    <ScrollView.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="LineBreakMode" Value="WordWrap"/>
+                            <Setter Property="HorizontalTextAlignment" Value="Start" />
+                            <Setter Property="FontSize" Value="Small"/>
+                            <Setter Property="FontFamily" Value=""/>
+                            <Setter Property="FontAttributes" Value="None"/>
+                            <Setter Property="MaximumWidthRequest" Value="215"/>
+                        </Style>
+                        <Style TargetType="Frame">
+                            <Setter Property="BackgroundColor" Value="LightGray"/>
+                            <Setter Property="BorderColor" Value="Transparent"/>
+                        </Style>
+                    </ScrollView.Resources>
+                    <HorizontalStackLayout Spacing="15">
+                        <Frame Margin="10" Padding="5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Concorra a prêmios com a Nubank Vida a patir de R$..." Margin="10"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Margin="10" Padding="5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="O débito automatico do NU já esta disponivel para voce!" Margin="10">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="O " TextColor="Black"/>
+                                            <Span Text="débito automatico" TextColor="{StaticResource PrimaryColor}"/>
+                                            <Span Text=" do NU já esta disponivel para voce!" TextColor="Black"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Margin="10" Padding="5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Convide amigos para o Nubank e desbloqueie ..." Margin="10">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Convide amigos para o Nubank " TextColor="{StaticResource PrimaryColor}"/>
+                                            <Span Text="e desbloqueie ..." TextColor="Black"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
 
-            <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand" HorizontalScrollBarVisibility="Never">
-                <ScrollView.Resources>
-                    <Style TargetType="Label">
-                        <Setter Property="LineBreakMode" Value="WordWrap"/>
-                        <Setter Property="HorizontalTextAlignment" Value="Center" />
-                    </Style>
-                    <Style TargetType="Ellipse">
-                        <Setter Property="HeightRequest" Value="75"/>
-                        <Setter Property="WidthRequest" Value="75"/>
-                        <Setter Property="Fill" Value="LightGray"/>
-                    </Style>
-                    <Style TargetType="Grid">
-                        <Setter Property="WidthRequest" Value="80"/>
-                    </Style>
-                </ScrollView.Resources>
-                <HorizontalStackLayout Spacing="15">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Area Pix" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Pagar" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Transferir" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Recarga de celular" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Caixinhas" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Cobrar" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Investir" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Doação" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Depositar" Grid.Row="1"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse/>
-                        <Label Text="Transferir Internac." Grid.Row="1"/>
-                    </Grid>
-                </HorizontalStackLayout>
-            </ScrollView>
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Cartão de credito" FontSize="Medium"/>
+                    <Label Text="Fatura atual" Grid.Row="1" FontAttributes="None"/>
+                    <Label Text="R$ 1.379,07" Grid.Row="2" FontSize="Medium"/>
+                    <Label Text="Limite disponivel de R$1.567,78" Grid.Row="3" TextColor="Gray" FontAttributes="None"/>
+                    <Label Grid.Row="4" TextColor="Gray" FontAttributes="None">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Débito automático "/>
+                                <Span Text="ativado" TextColor="Green"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Image Source="arrow_forward.svg" Grid.Column="1" HeightRequest="20"/>
+                </Grid>
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
 
-            <Frame Margin="10" Padding="5" BackgroundColor="LightGray">
-                <StackLayout Orientation="Horizontal">
-                    <Rectangle Fill="Red" HeightRequest="35" WidthRequest="35"/>
-                    <Label Text="Meus cartões" VerticalOptions="Center" Margin="10"/>
+                <Label Text="Acompanhe também" Margin="15,0" FontSize="Medium"/>
+                <Frame Margin="10" Padding="5" BackgroundColor="LightGray">
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle Fill="Pink" HeightRequest="35" WidthRequest="35"/>
+                        <Label Text="Assistente de pagamentos" VerticalOptions="Center" Margin="10"/>
+                    </StackLayout>
+                </Frame>
+
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+
+                <StackLayout Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Emprestimo" FontSize="Medium"/>
+                        <Label Text="Tudo certo voce esta em dia" Grid.Row="1" FontAttributes="None"/>
+                        <Image Source="arrow_forward.svg" Grid.Column="1" HeightRequest="20"/>
+                    </Grid>
+
                 </StackLayout>
-            </Frame>
 
-            <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand" HorizontalScrollBarVisibility="Never">
-                <ScrollView.Resources>
-                    <Style TargetType="Label">
-                        <Setter Property="LineBreakMode" Value="WordWrap"/>
-                        <Setter Property="HorizontalTextAlignment" Value="Start" />
-                        <Setter Property="FontSize" Value="Small"/>
-                        <Setter Property="FontFamily" Value=""/>
-                        <Setter Property="FontAttributes" Value="None"/>
-                        <Setter Property="MaximumWidthRequest" Value="215"/>
-                    </Style>
-                    <Style TargetType="Frame">
-                        <Setter Property="BackgroundColor" Value="LightGray"/>
-                        <Setter Property="BorderColor" Value="Transparent"/>
-                       
-                    </Style>
-                </ScrollView.Resources>
-                <HorizontalStackLayout Spacing="15">
-                    <Frame Margin="10" Padding="5">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Concorra a prêmios com a Nubank Vida a patir de R$..." Margin="10"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Margin="10" Padding="5">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="O débito automatico do NU já esta disponivel para voce!" Margin="10">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="O " TextColor="Black"/>
-                                        <Span Text="débito automatico" TextColor="{StaticResource PrimaryColor}"/>
-                                        <Span Text=" do NU já esta disponivel para voce!" TextColor="Black"/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Margin="10" Padding="5">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Convide amigos para o Nubank e desbloqueie ..." Margin="10">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="Convide amigos para o Nubank " TextColor="{StaticResource PrimaryColor}"/>
-                                        <Span Text="e desbloqueie ..." TextColor="Black"/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </StackLayout>
-                    </Frame>
-                </HorizontalStackLayout>
-            </ScrollView>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand" HorizontalScrollBarVisibility="Never">
+                    <ScrollView.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="LineBreakMode" Value="WordWrap"/>
+                            <Setter Property="HorizontalTextAlignment" Value="Start" />
+                            <Setter Property="FontSize" Value="Small"/>
+                            <Setter Property="FontFamily" Value=""/>
+                            <Setter Property="FontAttributes" Value="None"/>
+                            <Setter Property="MaximumWidthRequest" Value="215"/>
+                        </Style>
+                        <Style TargetType="Frame">
+                            <Setter Property="BackgroundColor" Value="LightGray"/>
+                            <Setter Property="BorderColor" Value="Transparent"/>
+                            <Setter Property="Margin" Value="10"/>
+                            <Setter Property="Padding" Value="0"/>
+                        </Style>
+                        <Style TargetType="Button">
+                            <Setter Property="FontAttributes" Value="Bold"/>
+                            <Setter Property="HorizontalOptions" Value="Start"/>
+                            <Setter Property="Margin" Value="10,0,0,10"/>
+                            <Setter Property="CornerRadius" Value="25"/>
+                        </Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill" Value="pink"/>
+                            <Setter Property="Grid.Row" Value="2"/>
+                        </Style>
+                        <Style TargetType="StackLayout">
+                            <Setter Property="Margin" Value="10"/>
+                            <Setter Property="Grid.Row" Value="1" />
+                        </Style>
+                    </ScrollView.Resources>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                    <HorizontalStackLayout Spacing="15">
+                        <Frame>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="150"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Rectangle Grid.Row="0"/>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Nubak Celular Seguro" FontSize="Body" FontAttributes="Bold"/>
+                                    <Label Text="100% de cobertura, 0% de estresse. Simule agora ..." TextColor="DimGray"/>
+                                </StackLayout>
+                                <Button Text="Conhecer" Grid.Row="2"/>
+                            </Grid>
+                        </Frame>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                HorizontalOptions="Center" />
+                        <Frame>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="150"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Rectangle Grid.Row="0"/>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Nubak Celular Seguro" FontSize="Body" FontAttributes="Bold"/>
+                                    <Label Text="Concorra a prêmios com a Nubank Vida a patir de R$..."/>
+                                </StackLayout>
+                                <Button Text="Conhecer" Grid.Row="2"/>
+                            </Grid>
+                        </Frame>
 
-        </VerticalStackLayout>
-    </ScrollView>
+                        <Frame>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="150"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Rectangle Grid.Row="0"/>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Nubak Celular Seguro" FontSize="Body" FontAttributes="Bold"/>
+                                    <Label Text="Concorra a prêmios com a Nubank Vida a patir de R$..."/>
+                                </StackLayout>
+                                <Button Text="Conhecer" Grid.Row="2"/>
+                            </Grid>
+                        </Frame>
+                    </HorizontalStackLayout>
+
+                </ScrollView>
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+                <Rectangle HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Frame VerticalOptions="End" HorizontalOptions="Center" Margin="25" Padding="10" BackgroundColor="White" BorderColor="Transparent" CornerRadius="50">
+            <StackLayout Orientation="Horizontal">
+                <Button Text="()" CornerRadius="50"/>
+                <Button Text="()" CornerRadius="50"/>
+                <Button Text="()" CornerRadius="50"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+
 
 </ContentPage>

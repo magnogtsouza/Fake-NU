@@ -5,10 +5,17 @@
              x:Class="Fake_NU.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="PrimaryColor">#820AD2</Color> 
+            <Color x:Key="PrimaryColor">#820AD2</Color>
+            <Color x:Key="Tertiary">#820AD2</Color>
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style TargetType="Rectangle">
+                <Setter Property="Fill" Value="lightgray" />
+            </Style>
+            <Style TargetType="Ellipse">
+                <Setter Property="Fill" Value="lightgray"/>
             </Style>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
