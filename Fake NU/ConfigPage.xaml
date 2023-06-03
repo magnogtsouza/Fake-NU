@@ -12,6 +12,7 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -21,16 +22,17 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Label Text="Valor em conta" Grid.Row="0"/>
-            <Label Text="Seu credito" Grid.Row="0"/>
-            <Label Text="Valor da fatura" Grid.Row="0"/>
+            <Label Text="Valor em conta: " Grid.Row="0"/>
+            <Label Text="Seu credito: " Grid.Row="1"/>
+            <Label Text="Valor da fatura: " Grid.Row="2"/>
 
-            <Label Text="R$00,00" Grid.Row="0" Grid.Column="1"/>
-            <Label Text="R$00,00" Grid.Row="0" Grid.Column="1"/>
-            <Label Text="R$00,00" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="R$00,00" Grid.Row="0" Grid.Column="1" x:Name="lblConta"/>
+            <Label Text="R$00,00" Grid.Row="1" Grid.Column="1" x:Name="lblCredit"/>
+            <Label Text="R$00,00" Grid.Row="2" Grid.Column="1" x:Name="lblFatura"/>
 
-            
-            
+            <Slider Grid.Row="0" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slConta"/>
+            <Slider Grid.Row="1" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slCredit"/>
+            <Slider Grid.Row="2" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slFatura"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
