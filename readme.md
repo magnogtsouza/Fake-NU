@@ -29,4 +29,4 @@ Aqui estão algumas capturas de tela do aplicativo Android:
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a licença MIT.
