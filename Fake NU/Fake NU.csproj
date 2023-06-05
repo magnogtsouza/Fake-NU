@@ -72,6 +72,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="LocalData" Version="1.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 

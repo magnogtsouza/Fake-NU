@@ -1,4 +1,6 @@
-﻿namespace Fake_NU;
+﻿using System.Text;
+
+namespace Fake_NU;
 
 public partial class MainPage : ContentPage
 {
@@ -27,13 +29,12 @@ public partial class MainPage : ContentPage
     }
     private async void ImageButton_Clicked(object sender, EventArgs e)
     {
-        //Shell.Current.GoToAsync("ConfigPage");
-        //NavigationPage
         ConfigPage s = new ConfigPage();
-        Navigation.PushModalAsync(s);
+        await Navigation.PushModalAsync(s);
+        //espera o modal ser aberto
         while (s.Parent != null)
         {
-            await Task.Delay(100);
+            await Task.Delay(600);
         }
         UpdateInfo();
     }

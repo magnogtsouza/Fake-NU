@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fake_NU.ConfigPage"
-             Title="ConfigPage">
+             Title="ConfigPage" BackgroundColor="White">
     <VerticalStackLayout>
         <Label 
             Text="Welcome to .NET MAUI!"
@@ -30,9 +30,9 @@
             <Label Text="R$00,00" Grid.Row="1" Grid.Column="1" x:Name="lblCredit"/>
             <Label Text="R$00,00" Grid.Row="2" Grid.Column="1" x:Name="lblFatura"/>
 
-            <Slider Grid.Row="0" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slConta"/>
-            <Slider Grid.Row="1" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slCredit"/>
-            <Slider Grid.Row="2" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slFatura"/>
+            <Slider Grid.Row="0" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slConta" ThumbColor="Purple"/>
+            <Slider Grid.Row="1" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slCredit" ThumbColor="Purple"/>
+            <Slider Grid.Row="2" Grid.Column="2" Maximum="10" MinimumTrackColor="Green" MaximumTrackColor="DimGray" x:Name="slFatura" ThumbColor="Purple"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
