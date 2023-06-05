@@ -24,9 +24,8 @@ Siga os passos abaixo para clonar e executar o projeto:
 ## Capturas de tela
 
 Aqui estão algumas capturas de tela do aplicativo Android:
-<img src="android.jpg" width="150" />
-![Main](android.jpg)
-![Config](android2.jpg | width="150")
+<br><img src="android.jpg" width="250" /><img src="android2.jpg" width="250" /><br>
+
 
 ## Licença
 
