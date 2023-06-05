@@ -1,14 +1,13 @@
 # Fake-NU
 
-Este é um projeto de exemplo que mostra como usar o Net Maui e o pacote LocalData para criar um aplicativo inspirado no layout do Nubank.
+Este é um projeto de exemplo que mostra como usar o Net Maui e o pacote nuget LocalData (também de autoria minha e é compativel com qualquer projeto .net) para criar um aplicativo inspirado no layout do Nubank.
 
 ## Recursos
 
 - Net Maui: uma plataforma multiplataforma para criar aplicativos nativos para Android, iOS, macOS e Windows com C# e XAML.
-- LocalData: um pacote NuGet que permite armazenar e acessar dados locais de forma simples e rápida usando SQLite.
-- Nubank: um banco digital que oferece serviços financeiros como cartão de crédito, conta digital, investimentos e empréstimos.
-- Google Fonts Icons: uma coleção de ícones gratuitos e de alta qualidade para uso em projetos de design.
-
+- LocalData: um pacote NuGet que permite armazenar e acessar dados locais de forma simples e rápida usando criptografia. 'https://nuget.org/packages/LocalData'
+- Google Fonts Icons: uma coleção de ícones gratuitos e de alta qualidade para uso em projetos de design. 'https://fonts.google.com/icons'
+- Nubank:É um banco digital que oferece serviços financeiros como cartão de crédito, conta digital, investimentos e empréstimos, e foi inspiração do projeto devido devido a diversidade de itens no seu layout.
 ## Como usar
 
 Para executar este projeto, você precisa ter o Visual Studio 2022 ou superior instalado em seu computador. Você também precisa ter o SDK do Net Maui e as ferramentas necessárias para cada plataforma que você deseja testar.
@@ -26,7 +25,7 @@ Siga os passos abaixo para clonar e executar o projeto:
 
 Aqui estão algumas capturas de tela do aplicativo Android:
 
-![Android](android.jpg)
+![Main](android.jpg) ![Config](android2.jpg)
 
 ## Licença
 
