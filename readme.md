@@ -24,11 +24,9 @@ Siga os passos abaixo para clonar e executar o projeto:
 
 ## Capturas de tela
 
-Aqui estão algumas capturas de tela do aplicativo em diferentes plataformas:
+Aqui estão algumas capturas de tela do aplicativo Android:
 
-![Android](android.png)
-![iOS](ios.png)
-![Windows](windows.png)
+![Android](android.jpg)
 
 ## Licença
 
